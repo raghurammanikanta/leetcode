@@ -1,0 +1,8 @@
+class Solution:
+    def convertToTitle(self, columnNumber: int) -> str:
+        column_name = ""
+        while columnNumber > 0:
+            remainder = (columnNumber - 1) % 26
+            column_name = chr(65 + remainder) + column_name
+            columnNumber = (columnNumber-1 ) // 26
+        return column_name
